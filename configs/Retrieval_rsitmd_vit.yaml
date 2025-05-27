@@ -1,0 +1,29 @@
+############## The train & val & test set root ##############
+train_file:  ['data/finetune/rsitmd_train.json'] # Path to the training data file
+val_file: 'data/finetune/rsitmd_val.json' # Path to the validation data file
+test_file: 'data/finetune/rsitmd_test.json' # Path to the testing data file
+image_root: '/home/zzl/images/rsitmd/'
+
+
+image_res: 224  # no need modify
+patch_size: 32   #if use swin, set the patch_size to 32, else 16
+
+
+################ Training setting ################
+#== no need revise in general
+batch_size_train: 128
+batch_size_test: 128
+batch_size_test_text: 128
+
+embed_dim: 512
+temp1: 0.07
+temp2: 0.07 
+if_evaluation: False
+save_epoch: True
+save_num_epoch: 10
+
+optimizer: {opt: adamW, lr: 0.00001, weight_decay: 0.01, lr_mult: 1}
+schedular: {sched: linear, lr: 0.00001, epochs: 60, num_warmup_steps: 5, min_lr: 0.000001}
+
+
+

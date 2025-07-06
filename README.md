@@ -18,9 +18,6 @@ Text has already been pre-processed in [PIR](https://github.com/jaychempan/PIR) 
 
 ## 🚀 Training
 
-The original [PIR](https://github.com/jaychempan/PIR) framework uses distributed training.  
-We provide a **single-GPU training mode** (requires a GPU with at least **24GB memory**) by modifying `run.py`.
-
 Please set your target GPU device in `run.py`, for example:
 
 ```python
